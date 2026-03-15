@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Kajal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for professional and beautiful look -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Satisfy&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Initial Screen to get user gesture for music -->
+    <div id="enter-screen" class="overlay">
+        <div class="enter-content">
+            <h1 class="enter-title">For You, Kajal ❤️</h1>
+            <button id="enter-btn">Open Your Surprise 🎁</button>
+        </div>
+    </div>
+
+    <!-- Loading Screen (Hidden initially) -->
+    <div id="loading-screen" class="loading-container hidden">
+        <div class="loading-content">
+            <img src="pic/cute.gif" alt="Cute Gif" class="loading-gif">
+            <div class="loading-text">Love Loading... <span id="progress-val">0%</span></div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Birthday Content -->
+    <div id="main-content" class="main-container hidden">
+        <div class="background-animation"></div>
+        
+        <div class="birthday-card">
+            <h1 class="birthday-title animate-title">Happy Birthday Kajal!</h1>
+            
+            <div class="pic-container animate-pop">
+                <img src="pic/kajal.jpg" alt="Kajal" class="birthday-pic">
+            </div>
+
+            <div class="message-box animate-fade-in">
+                <div id="typing-text" class="typing-animation"></div>
+            </div>
+
+            <div class="decorations">
+                <div class="candle"></div>
+                <div class="heart-animation"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music/rr.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
